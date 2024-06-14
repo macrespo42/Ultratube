@@ -8,14 +8,22 @@ export default {
       colors: {
         primary: "#10141E",
         secondary: "#FC4747",
+        secondaryDark: "#DF2121",
         tertiary: "#161D2F",
         quaternary: "#5A698F",
         quinary: "#FFFFFF",
         discord: "#7289DA",
-        github: "#2dba4e",
+        github: "#000",
       },
       fontSize: {
-        "heading-lg": ["32px", { fontWeight: "300", letterSpacing: "-0.031em", lineHeight: "normal" }],
+        "heading-lg": [
+          "32px",
+          {
+            fontWeight: "300",
+            letterSpacing: "-0.031em",
+            lineHeight: "normal",
+          },
+        ],
         "heading-md": ["24px", { lineHeight: "1" }],
         "heading-sm": ["18px", { lineHeight: "1" }],
         "heading-xs": ["13px", { lineHeight: "1" }],
@@ -57,7 +65,5 @@ export default {
       fill: ["hover", "focus"],
     },
   },
-  plugins: [
-    '@tailwindcss/aspect-ratio',
-  ],
-}
+  plugins: ["@tailwindcss/aspect-ratio"],
+};

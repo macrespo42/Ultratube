@@ -1,5 +1,3 @@
-// frontend/src/App.tsx
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { router } from "../src/router/routes.tsx";
@@ -13,12 +11,12 @@ import "react-toastify/dist/ReactToastify.css";
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  // <React.StrictMode>
-  <QueryClientProvider client={queryClient}>
-    <ContextProvider>
-      <ToastContainer />
-      <RouterProvider router={router} />
-    </ContextProvider>
-  </QueryClientProvider>
-  // </React.StrictMode>
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <ContextProvider>
+        <ToastContainer />
+        <RouterProvider router={router} />
+      </ContextProvider>
+    </QueryClientProvider>
+  </React.StrictMode>,
 );
