@@ -14,7 +14,7 @@ interface Props {
   nameSubmit: string;
   nameOtherAuth: "Already have an account ?" | "Don't have an account?";
   linkOtherAUth: "/register" | "/login";
-  valueLinkOtherAuth: "register" | "login";
+  valueLinkOtherAuth: "Register" | "login";
 }
 
 export default function FormAuthenticate({

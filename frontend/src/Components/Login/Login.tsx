@@ -20,7 +20,11 @@ export default function Login() {
   const navigate = useNavigate();
   const { TriggerReload } = useAuth();
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch({ type: "change", name: event.target.name, value: event.target.value });
+    dispatch({
+      type: "change",
+      name: event.target.name,
+      value: event.target.value,
+    });
   };
 
   const is_valid_arg = ({ username, password }: LoginType): boolean => {
@@ -28,7 +32,10 @@ export default function Login() {
     return true;
   };
 
-  const handleSubmit = async (event: MouseEvent<HTMLButtonElement>, name: string) => {
+  const handleSubmit = async (
+    event: MouseEvent<HTMLButtonElement>,
+    name: string,
+  ) => {
     event.preventDefault();
     if (name == "login") {
       if (is_valid_arg({ ...state })) {
@@ -59,8 +66,18 @@ export default function Login() {
   };
 
   const formInput: FormInput[] = [
-    { name: "username", value: state.username, placeholder: "username", handleChange },
-    { name: "password", value: state.password, placeholder: "password", handleChange },
+    {
+      name: "username",
+      value: state.username,
+      placeholder: "username",
+      handleChange,
+    },
+    {
+      name: "password",
+      value: state.password,
+      placeholder: "password",
+      handleChange,
+    },
   ];
 
   return (
